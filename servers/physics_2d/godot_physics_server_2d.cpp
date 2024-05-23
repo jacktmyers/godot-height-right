@@ -1078,6 +1078,12 @@ real_t GodotPhysicsServer2D::joint_get_param(RID p_joint, JointParam p_param) co
 	return 0;
 }
 
+Vector2 GodotPhysicsServer2D::joint_get_last_impulse(RID p_joint) const {
+	const GodotJoint2D *joint = joint_owner.get_or_null(p_joint);
+	ERR_FAIL_NULL_V(joint, Vector2());
+	return joint->get_last_impulse();
+}
+
 void GodotPhysicsServer2D::joint_disable_collisions_between_bodies(RID p_joint, const bool p_disable) {
 	GodotJoint2D *joint = joint_owner.get_or_null(p_joint);
 	ERR_FAIL_NULL(joint);

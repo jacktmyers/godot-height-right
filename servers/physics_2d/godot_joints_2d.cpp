@@ -246,6 +246,8 @@ void GodotPinJoint2D::solve(real_t p_step) {
 
 	Vector2 impulse = M.basis_xform(bias - rel_vel - Vector2(softness, softness) * P);
 
+	last_impulse = impulse;
+
 	if (dynamic_A) {
 		A->apply_impulse(-impulse, rA);
 	}

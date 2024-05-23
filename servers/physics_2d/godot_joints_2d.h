@@ -40,6 +40,7 @@ class GodotJoint2D : public GodotConstraint2D {
 	real_t max_force = 3.40282e+38;
 
 protected:
+	Vector2 last_impulse;
 	bool dynamic_A = false;
 	bool dynamic_B = false;
 
@@ -52,6 +53,8 @@ public:
 
 	_FORCE_INLINE_ void set_max_bias(real_t p_bias) { max_bias = p_bias; }
 	_FORCE_INLINE_ real_t get_max_bias() const { return max_bias; }
+
+	_FORCE_INLINE_ Vector2 get_last_impulse() const { return last_impulse; }
 
 	virtual bool setup(real_t p_step) override { return false; }
 	virtual bool pre_solve(real_t p_step) override { return false; }

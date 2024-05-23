@@ -278,6 +278,8 @@ public:
 	FUNC3(joint_set_param, RID, JointParam, real_t);
 	FUNC2RC(real_t, joint_get_param, RID, JointParam);
 
+	FUNC1RC(Vector2, joint_get_last_impulse, RID);
+
 	FUNC2(joint_disable_collisions_between_bodies, RID, const bool);
 	FUNC1RC(bool, joint_is_disabled_collisions_between_bodies, RID);
 

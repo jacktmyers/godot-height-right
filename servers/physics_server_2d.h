@@ -544,6 +544,8 @@ public:
 
 	virtual void joint_set_param(RID p_joint, JointParam p_param, real_t p_value) = 0;
 	virtual real_t joint_get_param(RID p_joint, JointParam p_param) const = 0;
+	
+	virtual Vector2 joint_get_last_impulse(RID p_joint) const = 0;
 
 	virtual void joint_disable_collisions_between_bodies(RID p_joint, const bool p_disable) = 0;
 	virtual bool joint_is_disabled_collisions_between_bodies(RID p_joint) const = 0;

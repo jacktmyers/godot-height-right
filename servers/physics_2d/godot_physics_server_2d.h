@@ -268,6 +268,8 @@ public:
 	virtual void joint_set_param(RID p_joint, JointParam p_param, real_t p_value) override;
 	virtual real_t joint_get_param(RID p_joint, JointParam p_param) const override;
 
+	virtual Vector2 joint_get_last_impulse(RID p_joint) const override;
+
 	virtual void joint_disable_collisions_between_bodies(RID p_joint, const bool p_disabled) override;
 	virtual bool joint_is_disabled_collisions_between_bodies(RID p_joint) const override;
 

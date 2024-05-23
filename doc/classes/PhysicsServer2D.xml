@@ -785,6 +785,13 @@
 				Returns the value of the given joint parameter. See [enum JointParam] for the list of available parameters.
 			</description>
 		</method>
+		<method name="joint_get_last_impulse" qualifiers="const">
+			<return type="Vector2" />
+			<param index="0" name="joint" type="RID" />
+			<description>
+				Returns a vector of the last impulse for a joint
+			</description>
+		</method>
 		<method name="joint_get_type" qualifiers="const">
 			<return type="int" enum="PhysicsServer2D.JointType" />
 			<param index="0" name="joint" type="RID" />
